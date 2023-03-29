@@ -6,6 +6,8 @@
 
 # constructor method is the method that creates the object or it's been called whenever we declare the new object and one of the major use of constructor is use to declare the initial state of the variables during development  
 
+# constructor is also set the properties of the each instances if we don't want to declare the property like (student1.name) then we have to pass the parameter to the student1 = Student("name") like this
+
             #------------------------------- Basic structure of class and instances----------------------------------
 
 # class Computer:
@@ -102,35 +104,40 @@
 
 # class inside the anathor class
 
-class Student :
+# class Student :
 
-    def __init__(self,name):
-        self.name = name
-        self.lap = self.Laptop()
+#     def __init__(self,name):
+#         self.name = name
+#         self.lap = self.Laptop()
 
-    def show(self):
-        print(f'The name of the student is {self.name}')
+#     def show(self):
+#         print(f'The name of the student is {self.name}')
 
-    class Laptop:
-        def __init__(self):
-                self.os = 'Windows'
-                self.brand = 'HP'
-                self.ram = 8
+#     class Laptop:
+#         def __init__(self):
+#                 self.os = 'Windows'
+#                 self.brand = 'HP'
+#                 self.ram = 8
 
-        def show(self,os,ram,brand):
+        # def show(self,os,ram,brand):
             #  print(f'The OS of Laptop is {self.os} and ram {self.ram} and brand is {self.brand}')
-             print(f'The OS of Laptop is {os} and ram {ram} and brand is {brand}')
+            #  print(f'The OS of Laptop is {os} and ram {ram} and brand is {brand}')
 
 
-student1 = Student("Ramesh")
-# lap1=student1.lap("windows","HP",8)
-student2 = Student("jayesh")
+# student1 = Student("jayesh")
 
-student3 = Student("Rajesh")
+# student1.name = "jayesh"
 
-print("3rd student",student3.lap.brand)
 
-student1.lap.show("windows",4,"samsung")
+# print(student1.name)
+
+# student2 = Student()
+
+# student3 = Student("Rajesh")
+
+# print("3rd student",student3.lap.brand)
+
+# student1.lap.show("windows",4,"samsung")
 
 
     
@@ -250,3 +257,50 @@ student1.lap.show("windows",4,"samsung")
 # c1 = C()
 
 # c1.methodC()
+
+
+
+                                #  ------------ Polymoprphism (operator overloading)--------------
+
+# In this method we overloading the Add method of + with overwrite the built in add function of python for class because python doesn't know how plus for two different instances of class
+
+# class Student:
+#      def __init__(self,m1,m2):
+#           self.m1 = m1
+#           self.m2 = m2
+
+#      def __add__(self,other):
+#         m1=self.m1 + other.m1
+#         m2=self.m2 + other.m2
+#         s3 = Student(m1,m2)
+#         return s3
+     
+
+# s1 = Student(22,25)
+# s2 = Student(20,22)
+
+# s3 = s1 + s2
+
+# print(s3.m1,s3.m2)
+
+
+
+                                        #--------- Method Overloading(polymorphism)----------
+# In this method if we sometime add one arg or two arg or three arg the method should behave the same so that's why we add the condition and add parameters to None if they are undefine
+class Student:
+    def __init__(self) -> None:
+        pass
+
+    def sum(self,a=None,b=None,c=None):
+        if not a == None and not b == None and not c== None:   
+            s = a + b +c
+            print (s)
+        elif not a == None and not b == None:
+            s = a+b
+            print(s)
+        else:
+            s = a
+            print(s)    
+
+s1 = Student()
+s1.sum(2)
