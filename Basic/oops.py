@@ -261,6 +261,8 @@
 # print(s3.m1,s3.m2)
 
 # --------- Method Overloading(polymorphism)----------
+
+
 # In this method if we sometime add one arg or two arg or three arg the method should behave the same so that's why we add the condition and add parameters to None if they are undefine
 # class Student:
 #     def __init__(self) -> None:
