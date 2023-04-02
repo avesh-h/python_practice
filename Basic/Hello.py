@@ -1,5 +1,20 @@
 # data types
-# Int , boolean , float , string , none 
+
+# None , Numeric (int , bool , float , complex) , List , Set , Dictionary , Tuple , String , Range (use for loops)
+
+# Int , boolean , float , string , none ,
+
+# Type conversion
+
+# a = 2
+
+# print(float(a))
+
+# print(bool(a))
+
+# c = False
+
+# print(int(c))
 
 # None type in python will give when if any element is undefined inside the array
 
@@ -10,17 +25,27 @@
 # Note: Install pep8 for formatting python code like block scope in python in javascript we can tell the perticular line of code inside the block scope or not which is inside {} it but in python block scope is added with : this so when we want end our code inside the block scope then at the end we need to add two line breaks in python programming.
 
 
+                # ------------Pass by value and pass by reference---------
 
 
+# python work is based on pass by assignment or call by object reference
+
+# SO python is actually work differently it behaves differently in python if we pass the variable for change the value so first it will act like pass by reference you can see in the example and when you change the value of the that variable it will act like pass by value in which it will not affect the original value of that memory but it will declare the new variable in memory and store the updated value inside of it.
+
+# before the updatation it will point to the original value and after updation it will change the reference of the value
+
+# def change_val(a):
+#     print(id(a))
+#     a = 22
+#     print("change refernce",id(a))
+
+# a = 10 
+# print(id(a))
+
+# change_val(a)
 
 
-
-
-
-
-
-                  #------------------------------ Strings and methods------------------------------
-
+# ------------------------------ Strings and methods------------------------------
 
 
 # template literals in Python
@@ -38,7 +63,7 @@
 # print(my_str.find("P"))
 
 # in method will give us the boolean value like if we want to check is exist or not
-# print('Python' in my_str) 
+# print('Python' in my_str)
 
 # String methods we learn
 
@@ -54,21 +79,14 @@
 # Replace method
 # print(my_str.replace("Beginners","Absolute beginner"))
 
+# -----------------Operators--------------------
 
+# Assignment operators
 
+# multiple assigning values in single lines
+# a, b, c = 5, 3, True
 
-
-
-
-
-
-
-
-
-
-                                          #-----------------Operators--------------------
-
-
+# print(a != b)
 
 # print(10 / 3) #it will give us 3.33333 (float form)
 
@@ -76,15 +94,44 @@
 
 # print(10 ** 3) # it will give us 10^3 = 1000
 
+
+# swap values
+# a = 3
+# b = 2
+
+# temp = a
+# a = b
+# b = temp
+
+# print(b)
+
+# Without declaring third varaible
+
+# a = 100
+
+# b = 526
+
+# a, b = (b-a)+a, (a-b)+b
+
+
+# print(b)
+
+#or (best technic)
+
+# a,b = 2 , 6
+
+# a = a + b #2 + 6 = 8
+# b = a - b #b = 8 - 6 = 2
+# a = a - b #a = 8-2 = 6
+
+
 # Base knowledge
 
 # List => []  it's array in python
 # Tuple => (1,2,3) It's iterable like array but it's immutable it cannot let us change the value inside of it
-# Dictionary => {"key","value"} It's like json object and also iterable in loop and mutable 
+# Dictionary => {"key","value"} It's like json object and also iterable in loop and mutable
 
-
-                                      #-----------if ,elif ,else-----------------
-
+# -----------if ,elif ,else-----------------
 
 
 # we can directly store variable without declare var const let like in js
@@ -106,24 +153,13 @@
 # else:
 #   print("1 is equal to 2")
 
-
-
-
-
-
-
-
-
-
-
-
-                              #------------------------Loops and itereators-----------------------------
+# ------------------------Loops and itereators-----------------------------
 
 # While loop
 
 # n=1
 # while n<=10:
-#   print(n) 
+#   print(n)
 #   n+=1
 
 
@@ -150,7 +186,7 @@
 
 #     else:
 #         print("You win!")
-#         break;    
+#         break;
 
 
 # start = False
@@ -161,10 +197,10 @@
 #       print("car is already started!")
 #     else:
 #       start=True
-#       print("Starting...")  
+#       print("Starting...")
 #   elif state == "stop":
 #     if not start:
-#       print("car is already stopped!")    
+#       print("car is already stopped!")
 #     else:
 #       start=False
 #       print("stopping...")
@@ -175,7 +211,6 @@
 #     help - repeat.
 #     ''')
 #   elif state.lower() == "quit":break
-
 
 
 # For loop
@@ -194,6 +229,13 @@
 # for book in books:
 #     print(book)
 
+
+#continue
+# for i in range(1,21):
+#     #for even
+#     if i % 2:
+#         continue
+#     print(i)
 
 # Total
 # arr2 = [10,20,30]
@@ -222,17 +264,60 @@
 
 
 
-# Functions
+
+
+                                                #--------------- Functions-----------------
+
+
+
+
+
 # def my_func():
 #     print("this is my first function in python")
 
 # my_func()
 
+# Parameters
+# Just like we used to do in JS = func(...args) in python = def(*args)
+
+# def the_func(name,*otherInfo):
+#     print(name)
+#     print(otherInfo) #it will give us in tuple format
+
+# the_func("rajesh","Mumbai",23,1992)
+
+
+# def the_param(**args):
+#     print(args) # it will give us in dictionary format
+
+#     for key,val in args.items():
+#         print(key,val)
+
+# user_info = the_param(name="rajesh",age=24,city="mumbai")
+
+
+
+# Gobal variables
+
+# a = 10
+
+# b = 20
+
+# def chnge_global():
+    
+#     print(globals()) #it will give us the whole dictionary of global variables
+
+#     globals()['a'] = 12
+
+# chnge_global()
+
+# print(a)
+
 
 # Conditional printing something
 # if condition1 or condition2           # ||
 # if condition1 and condition2         # &&
-# if not condition                     ## !condition
+# if not condition                     # !condition
 
 
 # like we use to add in js like if (!num){console.log("false")} but in python we have to like this
@@ -240,7 +325,7 @@
 # num2 =0
 
 # if not num2 :
-#     print("false") 
+#     print("false")
 
 # num1 = 2
 
@@ -256,19 +341,79 @@
 
 # print(type(check))
 
+# Recursion function in python
+
+# def fac_func(num):
+#     if num < 1 :
+#         return 1
+    
+#     return num * fac_func(num - 1)
+     
+    
+# print(fac_func(5))
+
+
+# Higher order function in python (map,filter,reduce) (Ternary and lamda function in python)
+
+# Filter function
+
+# def is_odd(n):
+#     if n % 2:
+#       return n  
+
+# nums = [1,2,5,44,3,34,22,5,3,32]
+
+# odd_list= list(filter(is_odd,nums))
+
+# print(odd_list)
+
+
+# Map function (lamda function syntax like arrow function in JS)
+
+# def squar(n):
+#     return n * n
+
+# num_list = [2,5,3,2,5,6,3]
+
+# map_list = list(map(lambda n : n*n,num_list))
+
+# print(map_list)
+
+
+# reduce function
+
+# from functools import reduce
+
+# def sum_odd(acc,curr):
+#     if curr % 2:
+#         acc.append(curr)
+    
+#     return acc
+
+# num_list = [1,2,54,23,43,52,32,4,33]
+# # total_sum = reduce(sum_odd, num_list,[]) 
+
+
+# With turnary operator and lambda function 
+# total_sum = reduce(lambda acc, curr: acc + [curr] if curr % 2 else acc, num_list, [])
+
+# print(total_sum)
 
 
 
 
+# a = [1,10,22]
+
+# b = [2,8,9]
+
+# c = [22,64,644]
+# d = a + b + c 
+
+# print(d)
+                                # ---------- Tuple therory and practicals-----------------
 
 
 
-
-
-
-
-
-                                      #---------- Tuple therory and practicals-----------------
 
 # Tuples ara exactly like list (arrays) but we cannot update or delete the elements from the tuplse it's immutable
 
@@ -278,7 +423,7 @@
 
 # There is method in python calles Unpacking which is similar to the destructuring in Javascript
 
-#destructuring in Python
+# destructuring in Python
 
 # cordinates = (1,2,3)
 
@@ -297,12 +442,10 @@
 
 
 
+            # -------------------------- List Mehods and practicals -------------------
 
 
 
-
-
-                                #-------------------------- List Mehods and practicals -------------------
 
 # and with list method we actually add inside the array so basically list is actually array in python
 
@@ -331,7 +474,7 @@
 #   if max < my_list[i]:
 #     max = my_list[i]
 
-# print(max)  
+# print(max)
 
 # List methods
 
@@ -395,8 +538,7 @@
 
 # sliced_arr3 = the_arr[1::2]   #like third argument will step for the array for this example it will give even numbers (even indexes)
 
-#sliced_arr3 = the_arr[0::2] #it will give odd numbers from the array with skip one step(odd indexes)
-
+# sliced_arr3 = the_arr[0::2] #it will give odd numbers from the array with skip one step(odd indexes)
 
 
 # Update operation of array
@@ -406,7 +548,7 @@
 # changed_var = 55
 
 # new_arr = arr_main[:]  #create copy of array
- 
+
 # give_index = new_arr.index(changed_var)  #Find the index of the array
 
 # new_arr[give_index] = 23     #update directly
@@ -414,9 +556,7 @@
 # print(new_arr)
 
 
-
-
-#Count method and different case scenarios
+# Count method and different case scenarios
 
 # full_arr = [2,5,4,7,5,4,3,1]
 
@@ -437,7 +577,7 @@
 # if find_num_in_arr in full_arr:
 #     print(True)
 
-# else : print(False)    
+# else : print(False)
 
 # Remove duplication list and get new array of unique values
 
@@ -456,7 +596,7 @@
 
 # print(unique_arr)
 
-#Or
+# Or
 
 # unique_arr = []
 
@@ -465,19 +605,12 @@
 #         unique_arr.append(number)
 # print(unique_arr)
 
-
-
-
-
-
-
-
-                    #----------------------------- Dictionary mehods and practicals ------------------
+# ----------------------------- Dictionary mehods and practicals ------------------
 
 
 # Dictionary : - dictionary is like object of javascript
 
-# Dictionary: Key-Value Data Structure  is exactly JSON in javascript 
+# Dictionary: Key-Value Data Structure  is exactly JSON in javascript
 
 # This one type is called the dictionary and also we cannot apply for loop onto this
 # python_obj = {
@@ -492,7 +625,7 @@
 
 # print(python_obj["val1"])
 
-# If we want to add something inside the dictionary then it will add name property at the end 
+# If we want to add something inside the dictionary then it will add name property at the end
 # python_obj["name"] = "avesh"
 
 # print(python_obj)
@@ -510,7 +643,7 @@
 
 # d = dict()
 
-# If we want any property inside it 
+# If we want any property inside it
 # d["Name"] = "jan"
 # d["lastName"] = "doe"
 # print(d)
@@ -525,6 +658,45 @@
 # we can apply for loop onto that for access the each value of dictionary
 # for key in d:
 #     print(d[key])
+
+
+# my_dict = {"one": "avesh", "2": "programming", 3: "red", 4: "true", 5: False}
+
+# for convert the dictioary keys of array and values of array
+# print(my_dict.keys())
+# print(my_dict.values())
+
+# Get method in dictionary to get key value it requires name of the key
+# print(my_dict.get("one"))
+
+# Pop method of dictionary it also require key name to remove the value from the dict and also return the deleted value
+# deleted_val = my_dict.pop("2")
+
+# print(my_dict)
+
+# print(deleted_val)
+
+# print(my_dict.popitem())
+
+# Convert the list into the dictionary
+
+# list1 = ["name", "std", "age", "birthYear"]
+
+# list2 = ["jayesh", 6, 14, 2001]
+
+# print(dict(zip(list1, list2)))
+
+# full_dict_list = dict(zip(list1, list2))
+
+# for loop to access the value of the dictionaries keys
+# for i in full_dict_list:
+#     print(full_dict_list[i])
+
+# How to remove the any property from the dictionary
+
+# i want to remove the property called age from the dictionary
+
+# del full_dict_list["age"]
 
 
 # user_self = {
@@ -553,7 +725,7 @@
 #     "7":"Seven",
 #     "8":"Eight",
 #     "9":"Nine"
-# }  
+# }
 
 # new_numbers={
 #     "1":"One",
@@ -564,12 +736,19 @@
 
 # for ch in phone:
 #     print(numbers[ch])
-  # print(new_numbers.get(ch,"not exist"))    
+# print(new_numbers.get(ch,"not exist"))
 
-
-                                    # ------------------Set methods-----------------------
+# ------------------Set methods-----------------------
 
 # set method is is used to store the unique value inside the array
+
+# if we want to create simple set we can directly add curly braces and add the values that you want to be them as unique as you can see i repeated value of 2 and 3 but we we'll not get repeated in set
+
+# s= {2,3,5,2,4,3}
+# print(s)
+
+# s2 = [2,5,3,2,5,4,7,8]
+# print(set(s2))
 
 # for declare the set method
 
@@ -594,13 +773,13 @@
 
 # If we want to add something inside the set
 # unique_set.add("23")
-# here first we remove the duplicate value from the set and then convert it into the array 
+# here first we remove the duplicate value from the set and then convert it into the array
 # print(unique_set)
 # mynewList = list(unique_set)
 
 # print("list",mynewList)
 
-# We can also join the two different collection of set with union method it's like join method in js 
+# We can also join the two different collection of set with union method it's like join method in js
 
 # Here you can see i add same value inside two different sets but still set method only add one value
 
@@ -625,17 +804,12 @@
 
 # print(set3)
 
+# ------------------------------stacks-----------------------------------
 
 
+# Stack
 
-
-
-                              #------------------------------stacks-----------------------------------
-
-
-# Stack 
-
-# In this example we get input from the user and based on that we perform the operation in list 
+# In this example we get input from the user and based on that we perform the operation in list
 
 # stack = []
 
@@ -659,16 +833,127 @@
 #     if selected_op == 1:
 #         push()
 #     elif selected_op == 2:
-#         pop()     
+#         pop()
 #     else:
 #         break
 
-
-
-                            # ---------------------------------Modules--------------------------------
+# ---------------------------------Modules--------------------------------
 # Here you can see that i import the class student from another file and use that class create instance of that here
 # import oops
 
 # student3 = oops.Student("ramesh")
 
 # print(student3.show())
+
+
+
+
+
+
+
+                            # -----------------Module Array------------------
+
+# It is array but in python we have to declare the type of value that we are want to store inside the array as you can see in below example
+
+# import array as arr
+
+
+#OR like destucture
+# from array import array
+
+#i is type of integer we can say f for float and s for string u for characters
+
+# arr1 = arr.array("i",[3,5,55,3,23])
+
+# arr1.append(6)
+
+# print(arr1)
+
+
+
+# example find the index of users array
+
+# print("How Many values you want in array?")
+
+# n = int(input("Enter the value: "))
+
+# user_arr = arr.array("i",[])
+
+# for i in range(n):
+#     val = int(input("Enter: ")) 
+#     user_arr.append(val)
+
+
+# print("serch the value for the Index")
+
+# serched_val = int(input("Enter serch Number:"))
+
+# for e in user_arr:
+#     print(e)
+#     if e == serched_val:
+#         print("Index is:",user_arr.index(e))
+#         break
+
+                                # -------------Module numpy for 2d array----------
+
+# Numpy libraray used for 2d array
+
+# from numpy import *
+
+# array_one = array([2,3,5,3,5,3])
+
+# my_arr = array_one[:]
+
+# print("My",my_arr)
+
+# print(id(array_one))
+# print(id(my_arr))
+
+# mul_arr = array([
+#     [1,2,3] ,
+#     [2,1,4]
+# ])
+
+# print(mul_arr.shape)
+
+# Convert into single Array
+
+# print(mul_arr.flatten())
+
+
+# Special varaibles
+
+# def main():
+
+#     print("Hello")
+#     print ("Welcome user")
+
+
+# if __name__ == "__main__":
+#     main()
+
+
+# connected with oops module 
+
+# in this issue we have two different modules in this module we are calling mul() function from the oops module and in oops module that mul function is called inside the main function so the problem is when we calls that mul() function in this module it will first call the main function of oops module and then mul() function will execute so to stop this we're gonna use special variable __name__ which can you see inside oops module.
+
+
+# from oops import mul
+
+
+# def checkCall():
+#     print("check is called")
+#     mul()
+
+
+
+# def main():
+#     print(f"Main of {__name__} module called")
+#     checkCall()   
+
+
+# main()     
+
+
+
+
