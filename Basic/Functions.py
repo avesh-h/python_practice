@@ -67,6 +67,19 @@
 # else: print("they are not equal")
 
 
+# Lambda function
+
+var = [2,3,4,5]
+
+# This is lambda function it is same as arrow function of the js it can also take multiple arguments
+square_rt = lambda n:n*n
+
+result = list(map(square_rt,var))
+
+print(result)
+
+
+
 # In python the type of array it shows type = list
 
 # check = [22]
@@ -86,6 +99,9 @@
 
 
 # Higher order function in python (map,filter,reduce) (Ternary and lamda function in python)
+
+# This higher order function is actually return the iterable object and then that object we can convert it into the list ,set , tuple
+
 
 # Filter function
 
@@ -111,6 +127,15 @@
 
 # print(map_list)
 
+# Map function can also apply on both different lists 
+
+# var1 = [2,3,4]
+# var2 = [5,6,7]
+
+
+# result = list(map(lambda n1,n2: n1 + n2 ,var1,var2))
+
+# print(result)
 
 # reduce function
 
@@ -142,3 +167,66 @@
 # d = a + b + c 
 
 # print(d)
+
+# Generator function
+
+# def my_func():
+#     yield 1
+#     yield 2
+#     yield 3
+#     yield 4
+
+
+# values = my_func()
+
+
+# # It will give us the single iteraion each time
+
+# print(values.__next__()) #1
+# print(values.__next__()) #2
+# print(values.__next__()) #3
+# print(values.__next__()) #4
+
+
+# Generator functions each iteration with help of for loop we can also do that with __next__ function()
+
+# def topTenSq():
+
+#     num = 1
+
+#     while num <=10:
+#         sq = num * num
+#         yield sq
+#         num+=1
+
+
+# values = topTenSq()
+
+# for i in values:
+#     print(i)
+
+
+# Linear search
+
+# position = -1
+
+# def find_func(arr,n):
+    
+#     for i in range(len(arr)):
+#         if n == arr[i]:
+#             globals()['position'] = i
+#             return True
+        
+#     return False
+
+# list_arr = [2,3,5,2,1,5,44,6,2,22]
+
+
+# searched_num = int(input("Enter the number you searching: "))
+
+# if find_func(list_arr,searched_num):
+#     print(f"Your search at index {position + 1}")
+
+# else: print("Sorry we coudn't find the number you search!")
+
+

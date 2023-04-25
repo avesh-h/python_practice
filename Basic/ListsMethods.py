@@ -157,3 +157,64 @@
 #     if number not in unique_arr:
 #         unique_arr.append(number)
 # print(unique_arr)
+
+
+
+# n = int(input())
+# arr = [2,3,6,6,5]
+# max = 0
+# for i in range(0,len(list(arr))):
+#     max = i
+#     if list[i] > list [n-1]:
+#         max = i
+
+# print(max)    
+
+
+# def get_max(arr, n):
+#     max_val = 0
+#     for i in range(len(arr)):
+#         if arr[i] > arr[n-1]:
+#             max_val = i
+#     return max_val
+
+# n = int(input())
+# arr = [2, 3, 6, 6, 5]
+# max_index = get_max(arr, n)
+# print(max_index)
+
+
+
+
+
+
+
+
+# arr = tuple(map(int,input().split()))
+# print(arr)
+
+
+
+# Deque Methods
+
+# append() = push
+# pop() = pop
+# appendleft() = unshift
+# popleft() = shift
+# extend() = concat two arrays at the end
+# extendleft() = concat two array at the beginning
+# clear() = clear all array element
+# remove(itemname) = remove item from the list
+# reverse()
+# sort()
+
+
+
+
+# list comprehension
+
+numbs = [2,5,3,6,4,3,6,7,88]
+
+my_arr = [numbs[i] for i in range(len(numbs)) if not numbs[i] % 2]
+
+print(my_arr)

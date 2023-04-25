@@ -24,6 +24,8 @@
 
 # Note: Install pep8 for formatting python code like block scope in python in javascript we can tell the perticular line of code inside the block scope or not which is inside {} it but in python block scope is added with : this so when we want end our code inside the block scope then at the end we need to add two line breaks in python programming.
 
+# * operator is also used in python for the destructuring or unpacking the remainning of variables and also used in args in function
+
 
                 # ------------Pass by value and pass by reference---------
 
